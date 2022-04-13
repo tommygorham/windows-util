@@ -1,0 +1,28 @@
+POWERSHELL SYSTEMINFO COMMANDS 
+  CPU INFO 
+    Description: Though you can run winkey+R:msinfo32 for a GUI of system info on windows 10/11 (and probably down to Windows Vista),
+                 for things like creating batch scripts, mimicking 'lscpu' in windows, or analyzing code performance and writing to .csv
+                 You can use the following commmands in Powershell for formatted cpu specs
+    
+    Command:     wmic cpu list /format:list
+    Command:     wmic CPU Get architecture,DeviceID,Name,NumberOfCores,NumberOfLogicalProcessors,ThreadCount,SocketDesignation,
+                 ProcessorType,L2CacheSize,L3CacheSize,Family,Caption,Version,Manufacturer,MaxClockSpeed /format:list
+                 
+  RAM INFO
+    Description: banklabel: which slots the RAM chips are installed in  
+                 capacity: size in bytes
+                 devicelocator: another entity to tell which slots the RAM chips are installed in.
+                 speed: speed of ram
+                 memorytype: 24 means DDR3 RAM, 0 most likely means DDR4 RAM, as DDR4 is unknown to WMIC command
+                 typedetail: 
+                 formfactor: 8 means DIMM, 12 means SODIMM
+    Command:     wmic MEMORYCHIP get banklabel,capacity,devicelocator,speed,memorytype,typedetail,formfactor
+    Command:     systeminfo | findstr /C:"Total Physical Memory"
+    
+   GPU/IGPU INFO
+    Command:     wmic path win32_videocontroller get name,videoarchitecture,videomemorytype,currentrefreshrate,maxrefreshrate,minrefreshrate,
+                 currentnumberofrows,currentnumberofcolumns,status,maxmemorysupported,currentbitsperpixel,currentverticalresolution,deviceid,
+                 description,availability,adaptercompatibility,adapterram,videoprocessor,adapterdactype,acceleratorcapabilities /format:list
+
+  OS INFO
+    Command: wmic os get version,caption,description,numberofprocesses 
