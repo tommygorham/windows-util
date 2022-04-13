@@ -14,9 +14,9 @@ POWERSHELL SYSTEMINFO COMMANDS
                  devicelocator: another entity to tell which slots the RAM chips are installed in.
                  speed: speed of ram
                  memorytype: 24 means DDR3 RAM, 0 most likely means DDR4 RAM, as DDR4 is unknown to WMIC command
-                 typedetail: 
+                 typeinfo: maps to SMBIOS, a value of 128 means synchronous, whereas a value of 16512 means synchronous and unbuffered
                  formfactor: 8 means DIMM, 12 means SODIMM
-    Command:     wmic MEMORYCHIP get banklabel,capacity,devicelocator,speed,memorytype,typedetail,formfactor
+    Command:     wmic MEMORYCHIP get banklabel,capacity,devicelocator,speed,memorytype,typeinfo,formfactor
     Command:     systeminfo | findstr /C:"Total Physical Memory"
     
    GPU/IGPU INFO
