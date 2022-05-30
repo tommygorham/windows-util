@@ -25,4 +25,4 @@ POWERSHELL SYSTEMINFO COMMANDS
                  description,availability,adaptercompatibility,adapterram,videoprocessor,adapterdactype,acceleratorcapabilities /format:list
 
   OS INFO
-    Command: wmic os get version,caption,description,numberofprocesses 
+    Command:     wmic os get version,caption,description,numberofprocesses 
