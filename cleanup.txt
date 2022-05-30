@@ -1,0 +1,6 @@
+1) Clean up Temp Files Located at: Win key + R %temp% 
+
+   Run CMD as admin @ C:\Windows\system32>
+   COMMAND: del /q/f/s %TEMP%\*
+  
+link to good batch file to clean all temp files: https://www.youtube.com/watch?v=dk8eHe8Q3ww 
