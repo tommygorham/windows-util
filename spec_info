@@ -1,4 +1,4 @@
-POWERSHELL SYSTEMINFO COMMANDS 
+POWERSHELL SYSTEMINFO COMMANDS (using wmic and systeminfo) 
   CPU INFO 
     Description: Though you can run winkey+R:msinfo32 for a GUI of system info on windows 10/11 (and probably down to Windows Vista),
                  for things like creating batch scripts, mimicking 'lscpu' in windows, or analyzing code performance and writing to .csv
