@@ -1,5 +1,30 @@
-- SysInternals Suite 
-- Driverview  
+- Anything in SysInternals Suite 
+- GodMode
+
+Analyzing System Performance: 
 - Windows performance analyzer
 - Windows performance recorder
 - Windows assesment console
+- LatencyMon (by Resplendence) 
+- WhySoSlow (by Resplendence)
+- dpclat
+- CPUZ_x64 (for a quick score) 
+- HWINFO64 (best overview of everything) 
+
+Optimizing System Performance: 
+- Process Lasso 
+- QuickCPU
+- PowerSettingsExplorer
+- TCPOptimizer
+- DeviceCleanup 
+- InterruptAffinityPolicyTool
+- TaskScheduler
+
+Especially good for Driver Debugging: 
+- Driverview  
+- dxdiag
+- sigverif
+- verifier
+
+Best Debloating App for Windows 11
+- TIW11 (available on Github) 
