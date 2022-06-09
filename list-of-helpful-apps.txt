@@ -1,0 +1,5 @@
+- SysInternals Suite 
+- Driverview  
+- Windows performance analyzer
+- Windows performance recorder
+- Windows assesment console
