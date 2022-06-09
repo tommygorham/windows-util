@@ -1,0 +1,9 @@
+list all services and destriptions in a table view: 
+Get-Service | Where-Object {$_.ServiceType -band 64} | Select-Object -ExpandProperty Name | ForEach-Object {Get-WmiObject win32_service -Filter "name='$_'"} | select-object name,description,PathName | Sort-Object pathname | Out-GridView
+
+For batch scripts
+@ECHO OFF 
+net start <service> 
+net stop <service> 
+pnputil /enable-device <Device_ID> 
+pnputil /disable-device <Device_ID> 
