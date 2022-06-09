@@ -1,0 +1,5 @@
+# Backup Drivers
+dism /online /export-driver /destination:C:\DriversBackup
+
+#BackupServices 
+sc query type= service state= all > "%UserProfile%\Desktop\All_Services.txt"
