@@ -1,14 +1,13 @@
-// For Powershell: 
-// ist all services and destriptions in a table view: 
+// Powershell: List all services and destriptions in a table view: 
 Get-Service | Where-Object {$_.ServiceType -band 64} | Select-Object -ExpandProperty Name | ForEach-Object {Get-WmiObject win32_service -Filter "name='$_'"} | select-object name,description,PathName | Sort-Object pathname | Out-GridView
 
-// disable a service upon startup  
+// Powershell: Disable a service upon startup  
 "Set-Service -Name <service-name> -StartupType disabled" 
 
-// TO  GET DRIVER INSTANCE
+// Powershell: Get Driver Instance
 Get-PnpDevice -FriendlyName "*AMD*" | ft -wrap -autosize instanceid
 
-// For batch scripts
+// Batch Scripts: Format example
 @ECHO OFF 
 net start <service> 
 net stop <service> 
