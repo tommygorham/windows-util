@@ -1,5 +1,9 @@
+For Powershell: 
 list all services and destriptions in a table view: 
 Get-Service | Where-Object {$_.ServiceType -band 64} | Select-Object -ExpandProperty Name | ForEach-Object {Get-WmiObject win32_service -Filter "name='$_'"} | select-object name,description,PathName | Sort-Object pathname | Out-GridView
+
+disable a service upon startup  
+"Set-Service -Name <service-name> -StartupType disabled" 
 
 For batch scripts
 @ECHO OFF 
